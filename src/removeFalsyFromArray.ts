@@ -6,5 +6,12 @@
  * @return {*}  {unknown[]}
  */
 export const removeFalsyFromArray = (arr: unknown[]): unknown[] => {
-  return [];
+  let result: any = [];
+
+  for (let value of arr) {
+    if (value) {
+      result.push(value);
+    }
+  }
+  return result;
 };
