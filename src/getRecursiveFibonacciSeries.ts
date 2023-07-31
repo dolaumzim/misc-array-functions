@@ -10,5 +10,17 @@
  * @return {*}  {number[]}
  */
 export const getRecursiveFibonacciSeries = (n: number): number[] => {
-  return [];
+  let result = new Array();
+
+  if (n === 0) {
+    result.push(0);
+    return result;
+  } else if (n === 1) {
+    result.push(0, 1);
+    return result;
+  } else {
+    const fibResult = getRecursiveFibonacciSeries(n - 1);
+    fibResult.push(fibResult[fibResult.length - 1] + fibResult[fibResult.length - 2]);
+    return fibResult;
+  }
 };
