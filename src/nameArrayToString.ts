@@ -1,3 +1,5 @@
+import { join } from 'path';
+
 /**
  * nameArrayToString
  * @description
@@ -14,5 +16,12 @@
  * @return {string}
  */
 export const nameArrayToString = (nameArray: string[]) => {
-  return '';
+  let result: string = '';
+
+  result = nameArray.join(', ');
+  if (nameArray.length === 1) {
+    return result;
+  }
+  result = result.slice(0, result.lastIndexOf(',')) + ' &' + result.slice(result.lastIndexOf(',') + 1);
+  return result;
 };
