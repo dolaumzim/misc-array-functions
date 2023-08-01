@@ -1,4 +1,4 @@
-import { join } from 'path';
+//import { join } from 'path';
 
 /**
  * nameArrayToString
@@ -22,6 +22,9 @@ export const nameArrayToString = (nameArray: string[]) => {
   if (nameArray.length === 1) {
     return result;
   }
-  result = result.slice(0, result.lastIndexOf(',')) + ' &' + result.slice(result.lastIndexOf(',') + 1);
+  result =
+    result.slice(0, result.lastIndexOf(',')) +
+    ' &' +
+    result.slice(result.lastIndexOf(',') + 1);
   return result;
 };
