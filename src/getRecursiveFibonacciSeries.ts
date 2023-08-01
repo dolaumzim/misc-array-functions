@@ -20,7 +20,9 @@ export const getRecursiveFibonacciSeries = (n: number): number[] => {
     return result;
   } else {
     const fibResult = getRecursiveFibonacciSeries(n - 1);
-    fibResult.push(fibResult[fibResult.length - 1] + fibResult[fibResult.length - 2]);
+    fibResult.push(
+      fibResult[fibResult.length - 1] + fibResult[fibResult.length - 2],
+    );
     return fibResult;
   }
 };
